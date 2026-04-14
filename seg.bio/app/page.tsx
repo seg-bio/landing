@@ -6,7 +6,7 @@ export default function Home() {
         Intelligent agent for biomedical image segmentation
       </p>
       <a
-        href="mailto:info@seg.bio"
+        href="mailto:contact@seg.bio"
         className="mt-10 rounded-xl bg-[var(--color-primary)] text-white px-6 py-3 transition hover:bg-[var(--color-primary-hover)]"
       >
         Get Early Access
