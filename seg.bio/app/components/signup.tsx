@@ -1,22 +1,8 @@
-"use client";
+import Script from "next/script";
 
-import { useState } from "react";
-
-const CONTACT = "contact@seg.bio";
+const TYPEFORM_ID = "01KQTKEDCJP109RVD3ARVEACGF";
 
 export function Signup() {
-  const [email, setEmail] = useState("");
-  const [lab, setLab] = useState("");
-
-  function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const subject = encodeURIComponent("Early access — seg.bio");
-    const body = encodeURIComponent(
-      `Email: ${email}\nLab / org: ${lab}\n\nWhat I'd segment:\n`,
-    );
-    window.location.href = `mailto:${CONTACT}?subject=${subject}&body=${body}`;
-  }
-
   return (
     <div className="signup-card" id="signup">
       <div>
@@ -43,37 +29,10 @@ export function Signup() {
           <span>· reply within 1 week</span>
         </div>
       </div>
-      <form className="signup-form" onSubmit={onSubmit}>
-        <span className="label">Work email</span>
-        <div className="row">
-          <input
-            type="email"
-            required
-            placeholder="you@lab.edu"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <span className="label">Lab / org</span>
-        <div className="row">
-          <input
-            type="text"
-            placeholder="e.g. Lichtman Lab, Harvard"
-            value={lab}
-            onChange={(e) => setLab(e.target.value)}
-          />
-        </div>
-        <div className="row">
-          <button type="submit">Request access →</button>
-        </div>
-        <span className="fine">
-          Or email us directly at{" "}
-          <span className="typeform-link">
-            <a href={`mailto:${CONTACT}`}>{CONTACT}</a>
-          </span>
-          .
-        </span>
-      </form>
+      <div className="signup-form" style={{ padding: 0, overflow: "hidden", minHeight: 360 }}>
+        <div data-tf-live={TYPEFORM_ID} style={{ width: "100%", minHeight: 360 }} />
+      </div>
+      <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />
     </div>
   );
 }
