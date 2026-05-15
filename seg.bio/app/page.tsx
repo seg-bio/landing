@@ -7,31 +7,29 @@ type Cell = {
   highlight?: string;
 };
 
-const WIKI = "https://github.com/donglaiw/agentic-kb/blob/main/wiki/publications";
-
 const columns: { scale: string; cells: Cell[] }[] = [
   {
     scale: "Tissue-scale",
     cells: [
-      { modality: "EM", dataset: "BvEM (JBHI'25)", detail: "mm³ cortex vessels · triSAM", tag: "blood vessel", link: `${WIKI}/2025_jbhi_trisam.md` },
-      { modality: "EM / microCT", dataset: "NucMM (MICCAI'21)", detail: "zebrafish + mouse cortex", tag: "nuclei", link: `${WIKI}/2021_miccai_nucmm.md` },
-      { modality: "MRA", dataset: "IntrA (TMI'25)", detail: "intracranial aneurysm 3D meshes · FreSeg", tag: "aneurysm", link: `${WIKI}/2025_tmi_freseg.md` },
+      { modality: "EM", dataset: "BvEM (JBHI'25)", detail: "mm³ cortex vessels · triSAM", tag: "blood vessel", link: "https://jia-wan.github.io/bvem" },
+      { modality: "EM / microCT", dataset: "NucMM (MICCAI'21)", detail: "zebrafish + mouse cortex", tag: "nuclei", link: "https://pytorchconnectomics.github.io/datasets/proj/nucmm/" },
+      { modality: "MRA", dataset: "IntrA (TMI'25)", detail: "intracranial aneurysm 3D meshes · FreSeg", tag: "aneurysm", link: "https://arxiv.org/abs/2404.14435" },
     ],
   },
   {
     scale: "Cell-scale",
     cells: [
-      { modality: "EM", dataset: "AxonEM (MICCAI'21)", detail: "axon instance segmentation", tag: "neuron", link: `${WIKI}/2021_miccai_axonem.md` },
+      { modality: "EM", dataset: "AxonEM (MICCAI'21)", detail: "axon instance segmentation", tag: "neuron", link: "https://pytorchconnectomics.github.io/datasets/proj/axonem/" },
       { modality: "LM+ExM", dataset: "LICONN", detail: "expansion + light-microscopy connectomics", tag: "neuron" },
-      { modality: "EM", dataset: "WaspSyn (TMI'24)", detail: "synapse instance segmentation", tag: "synapse", link: `${WIKI}/2024_tmi_waspsyn.md` },
+      { modality: "EM", dataset: "WaspSyn (TMI'24)", detail: "synapse instance segmentation", tag: "synapse", link: "https://codalab.lisn.upsaclay.fr/competitions/9169" },
     ],
   },
   {
     scale: "Organelle-scale",
     cells: [
       { modality: "EM", dataset: "CellMap Challenge", highlight: "1st place", detail: "multi-organelle FIB-SEM · Janelia/HHMI", tag: "pan-organelle" },
-      { modality: "EM", dataset: "MitoEM (TMI'23)", detail: "mitochondria · rat / human cortex", tag: "mitochondria", link: `${WIKI}/2023_tmi_mitoem.md` },
-      { modality: "EM", dataset: "VesiclePy (PLOS'25)", detail: "synaptic vesicle benchmark", tag: "vesicle", link: `${WIKI}/2025_plos_vesiclepy.md` },
+      { modality: "EM", dataset: "MitoEM (TMI'23)", detail: "mitochondria · rat / human cortex", tag: "mitochondria", link: "https://pytorchconnectomics.github.io/datasets/proj/mitoem/index.html" },
+      { modality: "EM", dataset: "VesiclePy (PLOS'25)", detail: "synaptic vesicle benchmark", tag: "vesicle", link: "https://github.com/PytorchConnectomics/VesiclePy" },
     ],
   },
 ];
