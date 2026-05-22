@@ -6,7 +6,6 @@ import { Triptych } from "./components/triptych";
 import { Compute } from "./components/compute";
 import { DemoSection } from "./components/demo-section";
 import { ModelsRegistry } from "./components/models-registry";
-import { EMStrip } from "./components/em-strip";
 import { FAQ } from "./components/faq";
 import { Signup } from "./components/signup";
 import { Footer } from "./components/footer";
@@ -27,10 +26,10 @@ export default function Home() {
         <div className="shell">
           <div className="section-eyebrow">— What it segments</div>
           <h2 className="section-title serif">
-            From whole vessels to single vesicles — SOTA at every scale.
+            From whole vessels down to single synapses — SOTA at every scale.
           </h2>
           <p className="section-lead">
-            One model per structure, six orders of magnitude in scale, public benchmarks at
+            One model per structure, five orders of magnitude in scale, public benchmarks at
             or above the state of the art.
           </p>
           <CapabilityScale />
@@ -75,16 +74,6 @@ export default function Home() {
           <div className="section-eyebrow">— Models</div>
           <h2 className="section-title serif">A registry of organelles, not opinions.</h2>
           <ModelsRegistry />
-        </div>
-      </section>
-
-      <section className="section" id="gallery">
-        <div className="shell">
-          <div className="section-eyebrow">— In the wild</div>
-          <h2 className="section-title serif">
-            From raw EM to instance masks, in minutes.
-          </h2>
-          <EMStrip />
         </div>
       </section>
 
