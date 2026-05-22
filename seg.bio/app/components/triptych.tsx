@@ -1,5 +1,3 @@
-import { EMCanvas } from "./em-canvas";
-
 function ModelsMini() {
   return (
     <div
@@ -76,6 +74,40 @@ function TuneMini() {
   );
 }
 
+function AgentMini() {
+  return (
+    <div
+      style={{
+        padding: 12,
+        fontSize: 11,
+        fontFamily: "var(--font-mono)",
+        color: "var(--ink-2)",
+        lineHeight: 1.55,
+      }}
+    >
+      <div>
+        <span style={{ color: "var(--ink-3)" }}>$ seg -p </span>
+        <span>&quot;Segment vasculature in this volume&quot;</span>
+      </div>
+      <div style={{ marginTop: 8, color: "var(--ink-3)" }}>
+        → matched model · <span style={{ color: "var(--ink)" }}>vessel-zsf</span>
+      </div>
+      <div style={{ color: "var(--ink-3)" }}>
+        → plan ready · 6m · <span style={{ color: "var(--ok)" }}>approve?</span>
+      </div>
+      <div style={{ marginTop: 6, borderTop: "1px solid var(--line)", paddingTop: 6 }}>
+        <span style={{ color: "var(--ok)" }}>✓</span> load tile · 2.1 GB
+      </div>
+      <div>
+        <span style={{ color: "var(--ok)" }}>✓</span> vessel-zsf inference
+      </div>
+      <div style={{ color: "var(--ink-3)" }}>
+        <span>⠋</span> watershed · 30s
+      </div>
+    </div>
+  );
+}
+
 export function Triptych() {
   const items = [
     {
@@ -94,7 +126,7 @@ export function Triptych() {
       n: "03",
       t: "Agentic workflow",
       p: "Describe what you want in chat. The agent matches the right model, proposes a runnable plan, and executes it on your volume. Approve once.",
-      v: <EMCanvas seed={9} z={88} overlays={["syn", "er"]} aspect="auto" />,
+      v: <AgentMini />,
     },
   ];
   return (
