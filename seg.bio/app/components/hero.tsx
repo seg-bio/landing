@@ -1,5 +1,3 @@
-import { EMCanvas } from "./em-canvas";
-
 const TAGLINE_HTML =
   'The best models for <em>volume</em> <span class="accent">biology</span> — pretrained, adaptable, agentic.';
 const SUBLINE =
@@ -15,25 +13,28 @@ function IDEMock() {
           <span />
         </div>
         <div className="url">
-          <b>seg.bio</b> / wei-lab / hippocampus / <b>liconn-hc-01</b>
+          <b>seg.bio</b> / wei-lab / microns-mm3 / <b>vasculature</b>
         </div>
         <div style={{ width: 48 }} />
       </div>
       <div className="body">
         <div className="canvas">
-          <EMCanvas seed={3} z={64} overlays={["mito", "syn"]} aspect="auto" />
-          <div className="label">XY · z=64 · 4·4·40 nm</div>
-          <div className="crosshair" />
+          <img
+            src="/microns-vasculature.webp"
+            alt="MICrONS cortical mm³ vasculature segmentation"
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          />
+          <div className="label">vasculature · MICrONS mm³</div>
         </div>
         <div className="agent">
           <div className="agent-head">Agent</div>
           <div className="agent-body">
             <div>
               <span className="who">you</span>
-              <span className="bubble user">Segment mitochondria here</span>
+              <span className="bubble user">Segment vasculature in this volume</span>
             </div>
             <div>
-              <span className="who">agent · mito-SDT v3</span>
+              <span className="who">agent · vessel-zsf</span>
               <div className="plan">
                 <div className="head">
                   <b>Plan</b>
