@@ -530,6 +530,45 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .scale-bench span { color: var(--ink-3); }
 .scale-bench.empty { color: var(--ink-4); }
 
+.credit-card {
+  max-width: 520px; margin: 0 auto;
+  border: 1px solid var(--line-strong); border-radius: 10px;
+  background: var(--bg-elev); padding: 22px 24px;
+}
+.cc-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.cc-label {
+  font-size: 10.5px; color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.cc-balance {
+  font-family: var(--font-serif); font-size: 32px; line-height: 1;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.cc-bar {
+  height: 6px; border-radius: 3px; background: var(--bg-sunk, oklch(0.94 0.004 80));
+  overflow: hidden; margin-bottom: 16px;
+}
+.cc-bar-fill {
+  height: 100%; background: var(--ink);
+}
+.cc-rows {
+  display: flex; flex-direction: column; gap: 6px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--line);
+}
+.cc-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13px; color: var(--ink-2);
+}
+.cc-row .mono { color: var(--ink); }
+.cc-foot {
+  padding-top: 12px; font-size: 11px; color: var(--ink-3);
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.cc-sep { color: var(--ink-4); }
+
 .em-hero {
   position: relative; aspect-ratio: 4 / 3;
   border-radius: 12px; overflow: hidden;

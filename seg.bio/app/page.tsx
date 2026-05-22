@@ -3,6 +3,7 @@ import { Hero } from "./components/hero";
 import { LabsRow } from "./components/proof";
 import { CapabilityScale } from "./components/capability-scale";
 import { Triptych } from "./components/triptych";
+import { Compute } from "./components/compute";
 import { DemoSection } from "./components/demo-section";
 import { ModelsRegistry } from "./components/models-registry";
 import { EMStrip } from "./components/em-strip";
@@ -43,6 +44,19 @@ export default function Home() {
             Three things, tightly coupled.
           </h2>
           <Triptych />
+        </div>
+      </section>
+
+      <section className="section" id="compute">
+        <div className="shell">
+          <div className="section-eyebrow">— Compute</div>
+          <h2 className="section-title serif">No GPUs? No problem.</h2>
+          <p className="section-lead">
+            Inference and fine-tuning run on our managed cluster. Pay in credits — no
+            provisioning, no GPU quotas, no setup. Or point us at your own cluster anytime
+            and run free.
+          </p>
+          <Compute />
         </div>
       </section>
 
