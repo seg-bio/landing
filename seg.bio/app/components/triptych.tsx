@@ -51,24 +51,49 @@ function ModelsMini() {
   );
 }
 
+function TuneMini() {
+  return (
+    <div
+      style={{
+        padding: 12,
+        fontSize: 11,
+        fontFamily: "var(--font-mono)",
+        color: "var(--ink-2)",
+        lineHeight: 1.55,
+      }}
+    >
+      <div style={{ color: "var(--ink-3)" }}>$ seg tune mito-SDT \</div>
+      <div style={{ paddingLeft: 14 }}>--data s3://lab/run-07 \</div>
+      <div style={{ paddingLeft: 14 }}>--epochs 12 --lr 3e-5</div>
+      <div style={{ marginTop: 8, borderTop: "1px solid var(--line)", paddingTop: 8 }}>
+        <span>step 240 / 1.2k</span>
+        <span style={{ float: "right", color: "var(--ok)" }}>F1 0.91 → 0.94</span>
+      </div>
+      <div style={{ marginTop: 4, color: "var(--ink-3)" }}>
+        <span>eta 4m · 4x H100</span>
+      </div>
+    </div>
+  );
+}
+
 export function Triptych() {
   const items = [
     {
       n: "01",
-      t: "The #1 model on LICONN",
-      p: "Trained on the largest LICONN volume corpus assembled. Benchmarked monthly against every public alternative — and shipped with a money-back guarantee if it doesn't beat them on your data.",
-      v: <EMCanvas seed={11} z={48} overlays={["mito"]} aspect="auto" />,
-    },
-    {
-      n: "02",
-      t: "SOTA for everything else",
-      p: "Mitochondria, synapses, ER, lipid droplets, neuron tracing — we maintain a model per structure at or above the public state of the art, and replace each one when a better paper drops.",
+      t: "SOTA pretrained models",
+      p: "A model per structure, benchmarked monthly. #1 on LICONN, SOTA on mitochondria, synapses, neuron tracing. Replaced the moment a better paper drops.",
       v: <ModelsMini />,
     },
     {
+      n: "02",
+      t: "Model adaptation API",
+      p: "Bring your data. Fine-tune any model in the registry with a Python-level training API — we handle the GPUs, tiling, and checkpointing.",
+      v: <TuneMini />,
+    },
+    {
       n: "03",
-      t: "Infrastructure that disappears",
-      p: "The IDE handles tiling, anisotropy, GPU scheduling, proofreading, and provenance. You point at a volume in chat. We do the rest. Your time goes back to biology.",
+      t: "Agentic workflow",
+      p: "Describe what you want in chat. The agent matches the right model, proposes a runnable plan, and executes it on your volume. Approve once.",
       v: <EMCanvas seed={9} z={88} overlays={["syn", "er"]} aspect="auto" />,
     },
   ];

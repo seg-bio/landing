@@ -1,9 +1,9 @@
 import { EMCanvas } from "./em-canvas";
 
 const TAGLINE_HTML =
-  'The best models for <em>volume</em> <span class="accent">biology</span>, in an IDE that runs them.';
+  'The best models for <em>volume</em> <span class="accent">biology</span> — pretrained, adaptable, agentic.';
 const SUBLINE =
-  "We train and host the #1 model for LICONN and the SOTA for every other structure. The agentic IDE makes them trivial to point at your data.";
+  "SOTA pretrained models for every structure. A fine-tuning API to make them yours. An agent that runs them on your data.";
 
 function IDEMock() {
   return (
@@ -77,9 +77,6 @@ export function Hero() {
   return (
     <section className="hero">
       <div className="shell">
-        <span className="hero-eyebrow">
-          <span className="pulse" /> Now in private beta · v0.4
-        </span>
         <div className="hero-grid variant-mock">
           <div>
             <h1
@@ -94,13 +91,6 @@ export function Hero() {
               <a href="#how" className="btn-ghost">
                 See it work
               </a>
-            </div>
-            <div className="hero-meta">
-              <span>SOC2 in progress</span>
-              <span className="dot" />
-              <span>Runs on your cluster or ours</span>
-              <span className="dot" />
-              <span>NGFF · OME-Zarr native</span>
             </div>
           </div>
           <IDEMock />

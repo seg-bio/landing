@@ -1,6 +1,6 @@
 import { Nav } from "./components/nav";
 import { Hero } from "./components/hero";
-import { Benchmarks, LabsRow } from "./components/proof";
+import { LabsRow } from "./components/proof";
 import { CapabilityScale } from "./components/capability-scale";
 import { Triptych } from "./components/triptych";
 import { DemoSection } from "./components/demo-section";
@@ -18,10 +18,6 @@ export default function Home() {
 
       <section className="proof-section">
         <div className="shell">
-          <div className="proof-eyebrow">
-            Best-in-class on LICONN · SOTA on every other structure
-          </div>
-          <Benchmarks />
           <LabsRow />
         </div>
       </section>
@@ -30,12 +26,11 @@ export default function Home() {
         <div className="shell">
           <div className="section-eyebrow">— What it segments</div>
           <h2 className="section-title serif">
-            From whole vessels down to single vesicles.
+            From whole vessels to single vesicles — SOTA at every scale.
           </h2>
           <p className="section-lead">
-            One workspace, one prompt language, six orders of magnitude in scale. Every
-            structure has at least one production-grade model in the registry — most have
-            several.
+            One model per structure, six orders of magnitude in scale, public benchmarks at
+            or above the state of the art.
           </p>
           <CapabilityScale />
         </div>
@@ -43,29 +38,20 @@ export default function Home() {
 
       <section className="section" id="how">
         <div className="shell">
-          <div className="section-eyebrow">— What it is</div>
+          <div className="section-eyebrow">— What we offer</div>
           <h2 className="section-title serif">
-            The best models, in a workspace that <em>runs</em> them.
+            Three things, tightly coupled.
           </h2>
-          <p className="section-lead">
-            We don&apos;t just ship an IDE — we train the models inside it. #1 on LICONN,
-            SOTA elsewhere. The infrastructure is what makes pointing them at a 10 TB volume
-            take a sentence instead of a sprint.
-          </p>
           <Triptych />
         </div>
       </section>
 
       <section className="section" id="demo">
         <div className="shell">
-          <div className="section-eyebrow">— A typical run</div>
+          <div className="section-eyebrow">— The agent at work</div>
           <h2 className="section-title serif">
-            Type a request. Get a runnable plan in a second.
+            Type a request. Get a runnable plan.
           </h2>
-          <p className="section-lead">
-            Each prompt resolves to a versioned plan: data, model, post-processing, exports.
-            Approve once and the agent runs it; intervene at any step.
-          </p>
           <DemoSection />
         </div>
       </section>
@@ -74,10 +60,6 @@ export default function Home() {
         <div className="shell">
           <div className="section-eyebrow">— Models</div>
           <h2 className="section-title serif">A registry of organelles, not opinions.</h2>
-          <p className="section-lead">
-            Public benchmarks on standard tiles. Versioned, reproducible, and citable. Bring
-            your own checkpoints; we&apos;ll mint them and keep them updated.
-          </p>
           <ModelsRegistry />
         </div>
       </section>
@@ -88,7 +70,6 @@ export default function Home() {
           <h2 className="section-title serif">
             From raw EM to instance masks, in minutes.
           </h2>
-          <p className="section-lead">Synthesized previews — your data will look better.</p>
           <EMStrip />
         </div>
       </section>
@@ -96,7 +77,7 @@ export default function Home() {
       <section className="section" id="faq">
         <div className="shell">
           <div className="section-eyebrow">— FAQ</div>
-          <h2 className="section-title serif">Things people ask before signing up.</h2>
+          <h2 className="section-title serif">Things people ask.</h2>
           <FAQ />
         </div>
       </section>
