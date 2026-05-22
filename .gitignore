@@ -1,0 +1,9 @@
+# Next.js
+.next/
+
+# Firebase
+.firebase/
+*-debug.log
+
+# Editor / agent
+.claude/
