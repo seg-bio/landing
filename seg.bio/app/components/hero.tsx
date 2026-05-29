@@ -1,3 +1,16 @@
+import dynamic from "next/dynamic";
+
+const MembraneViewer = dynamic(() => import("./membrane-viewer"), {
+  ssr: false,
+  loading: () => (
+    <img
+      src="/kidney-membranes-poster.webp"
+      alt="jrc_mus-kidney cell-membrane segmentation"
+      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+    />
+  ),
+});
+
 const TAGLINE_HTML =
   'The best models for <em>volume</em> <span class="accent">biology</span> — pretrained, adaptable, agentic.';
 const SUBLINE =
@@ -13,28 +26,24 @@ function IDEMock() {
           <span />
         </div>
         <div className="url">
-          <b>seg.bio</b> / wei-lab / microns-mm3 / <b>vasculature</b>
+          <b>seg.bio</b> / cellmap / jrc_mus-kidney / <b>membranes</b>
         </div>
         <div style={{ width: 48 }} />
       </div>
       <div className="body">
         <div className="canvas">
-          <img
-            src="/microns-vasculature.webp"
-            alt="MICrONS cortical mm³ vasculature segmentation"
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-          />
-          <div className="label">vasculature · MICrONS mm³</div>
+          <MembraneViewer />
+          <div className="label">cell membranes · jrc_mus-kidney</div>
         </div>
         <div className="agent">
           <div className="agent-head">Agent</div>
           <div className="agent-body">
             <div>
               <span className="who">you</span>
-              <span className="bubble user">Segment vasculature in this volume</span>
+              <span className="bubble user">Segment cell membranes in this volume</span>
             </div>
             <div>
-              <span className="who">agent · vessel-zsf</span>
+              <span className="who">agent · membrane-sdt</span>
               <div className="plan">
                 <div className="head">
                   <b>Plan</b>
