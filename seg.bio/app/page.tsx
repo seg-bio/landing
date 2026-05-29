@@ -5,7 +5,6 @@ import { CapabilityScale } from "./components/capability-scale";
 import { Triptych } from "./components/triptych";
 import { Compute } from "./components/compute";
 import { DemoSection } from "./components/demo-section";
-import { ModelsRegistry } from "./components/models-registry";
 import { FAQ } from "./components/faq";
 import { Signup } from "./components/signup";
 import { Footer } from "./components/footer";
@@ -66,14 +65,6 @@ export default function Home() {
             Type a request. Get a runnable plan.
           </h2>
           <DemoSection />
-        </div>
-      </section>
-
-      <section className="section" id="models">
-        <div className="shell">
-          <div className="section-eyebrow">— Models</div>
-          <h2 className="section-title serif">A registry of organelles, not opinions.</h2>
-          <ModelsRegistry />
         </div>
       </section>
 

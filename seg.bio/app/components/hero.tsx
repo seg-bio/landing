@@ -1,15 +1,4 @@
-import dynamic from "next/dynamic";
-
-const MembraneViewer = dynamic(() => import("./membrane-viewer"), {
-  ssr: false,
-  loading: () => (
-    <img
-      src="/kidney-membranes-poster.webp"
-      alt="jrc_mus-kidney cell-membrane segmentation"
-      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-    />
-  ),
-});
+import { MembraneCanvas } from "./membrane-canvas";
 
 const TAGLINE_HTML =
   'The best models for <em>volume</em> <span class="accent">biology</span> — pretrained, adaptable, agentic.';
@@ -32,7 +21,7 @@ function IDEMock() {
       </div>
       <div className="body">
         <div className="canvas">
-          <MembraneViewer />
+          <MembraneCanvas />
           <div className="label">cell membranes · jrc_mus-kidney</div>
         </div>
         <div className="agent">

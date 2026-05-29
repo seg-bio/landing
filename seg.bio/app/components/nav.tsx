@@ -10,7 +10,6 @@ export function Nav() {
         </a>
         <div className="nav-links">
           <a href="#how">How it works</a>
-          <a href="#models">Models</a>
           <a href="#faq">FAQ</a>
           <a href="#signup" className="cta">
             Get early access
