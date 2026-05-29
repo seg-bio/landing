@@ -1,4 +1,4 @@
-type Bench = { rank: string; value: string; dataset: string };
+type Bench = { rank: string; dataset: string };
 
 type Item = {
   id: string;
@@ -10,31 +10,31 @@ type Item = {
 
 const ITEMS: Item[] = [
   {
-    id: "vessel",
-    label: "Blood vessel",
+    id: "membrane",
+    label: "Cell membrane",
     size: "~10 μm",
-    bench: { rank: "SOTA", value: "zero-shot", dataset: "MICrONS mm³" },
-    image: { src: "/microns-vasculature.webp", credit: "Wan & Wei '24" },
+    image: { src: "/seg-membrane.webp", credit: "jrc_mus-kidney" },
   },
   {
     id: "cell",
     label: "Neuron",
     size: "~5 μm",
-    bench: { rank: "SOTA", value: "0.873 ARI", dataset: "FlyEM Hemibrain" },
-    image: { src: "/microns-neuron.webp", credit: "MICrONS" },
+    bench: { rank: "SOTA", dataset: "AxonEM" },
+    image: { src: "/seg-neuron.webp", credit: "AxonEM · Wei '21" },
   },
   {
     id: "nuc",
     label: "Nuclei",
     size: "~2 μm",
-    image: { src: "/microns-nuclei.webp", credit: "MICrONS" },
+    bench: { rank: "SOTA", dataset: "NucEMFix" },
+    image: { src: "/seg-nuclei.webp", credit: "NucEMFix · Wang '26" },
   },
   {
     id: "syn",
     label: "Synapse",
     size: "~50 nm",
-    bench: { rank: "SOTA", value: "0.881 AP", dataset: "CREMI A+B+C" },
-    image: { src: "/microns-synapse.webp", credit: "MICrONS" },
+    bench: { rank: "SOTA", dataset: "CREMI" },
+    image: { src: "/seg-synapse.webp", credit: "Lin '20" },
   },
 ];
 
@@ -72,7 +72,6 @@ export function CapabilityScale() {
             <div className="scale-size mono">{it.size}</div>
             {it.bench ? (
               <div className="scale-bench mono">
-                <b>{it.bench.value}</b>
                 <span>{it.bench.dataset}</span>
               </div>
             ) : (
