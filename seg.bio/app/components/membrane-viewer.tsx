@@ -4,12 +4,16 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Bounds, Center } from "@react-three/drei";
 
+// Self-hosted Draco decoder (copied from three) so the mesh has no external
+// CDN runtime dependency.
+const DRACO_PATH = "/draco/";
+
 function Mesh() {
-  const { scene } = useGLTF("/kidney-membranes.glb");
+  const { scene } = useGLTF("/kidney-membranes.glb", DRACO_PATH);
   return <primitive object={scene} />;
 }
 
-useGLTF.preload("/kidney-membranes.glb");
+useGLTF.preload("/kidney-membranes.glb", DRACO_PATH);
 
 export default function MembraneViewer() {
   return (
