@@ -9,11 +9,11 @@ import { OrbitControls, useGLTF, Bounds, Center } from "@react-three/drei";
 const DRACO_PATH = "/draco/";
 
 function Mesh() {
-  const { scene } = useGLTF("/kidney-membranes.glb", DRACO_PATH);
+  const { scene } = useGLTF("/hero-vessel.glb", DRACO_PATH);
   return <primitive object={scene} />;
 }
 
-useGLTF.preload("/kidney-membranes.glb", DRACO_PATH);
+useGLTF.preload("/hero-vessel.glb", DRACO_PATH);
 
 export default function MembraneViewer() {
   return (

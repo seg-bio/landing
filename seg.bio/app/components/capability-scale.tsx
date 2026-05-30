@@ -3,36 +3,31 @@ type Bench = { rank: string; dataset: string };
 type Item = {
   id: string;
   label: string;
-  size: string;
   bench?: Bench;
   image: { src: string; credit: string };
 };
 
 const ITEMS: Item[] = [
   {
-    id: "membrane",
-    label: "Cell membrane",
-    size: "~10 μm",
-    image: { src: "/seg-membrane.webp", credit: "jrc_mus-kidney" },
+    id: "vessel",
+    label: "Blood vessel",
+    image: { src: "/seg-membrane.webp", credit: "" },
   },
   {
     id: "cell",
     label: "Neuron",
-    size: "~5 μm",
     bench: { rank: "SOTA", dataset: "AxonEM" },
     image: { src: "/seg-neuron.webp", credit: "AxonEM · Wei '21" },
   },
   {
     id: "nuc",
     label: "Nuclei",
-    size: "~2 μm",
     bench: { rank: "SOTA", dataset: "NucEMFix" },
     image: { src: "/seg-nuclei.webp", credit: "NucEMFix · Wang '26" },
   },
   {
     id: "syn",
     label: "Synapse",
-    size: "~50 nm",
     bench: { rank: "SOTA", dataset: "CREMI" },
     image: { src: "/seg-synapse.webp", credit: "Lin '20" },
   },
@@ -69,7 +64,6 @@ export function CapabilityScale() {
               )}
             </div>
             <div className="scale-label">{it.label}</div>
-            <div className="scale-size mono">{it.size}</div>
             {it.bench ? (
               <div className="scale-bench mono">
                 <span>{it.bench.dataset}</span>
