@@ -1,7 +1,7 @@
 import { MembraneCanvas } from "./membrane-canvas";
 
 const TAGLINE_HTML =
-  'The best AI models for <em>volume</em> <span class="accent">biology</span> — pretrained, adaptable, agentic.';
+  'AI models for <em>volume</em> <span class="accent">biology</span> — pretrained, adaptable, agentic.';
 const SUBLINE =
   "SOTA pretrained models for every structure. A fine-tuning API to make them yours. An agent that runs them on your data.";
 
@@ -15,24 +15,24 @@ function IDEMock() {
           <span />
         </div>
         <div className="url">
-          <b>seg.bio</b> / demo / <b>blood-vessel</b>
+          <b>seg.bio</b> / demo / <b>organelle</b>
         </div>
         <div style={{ width: 48 }} />
       </div>
       <div className="body">
         <div className="canvas">
           <MembraneCanvas />
-          <div className="label">blood vessel · 3D EM</div>
+          <div className="label">organelle · 3D EM</div>
         </div>
         <div className="agent">
           <div className="agent-head">Agent</div>
           <div className="agent-body">
             <div>
               <span className="who">you</span>
-              <span className="bubble user">Segment blood vessels in this volume</span>
+              <span className="bubble user">Segment mitochondria in this volume</span>
             </div>
             <div>
-              <span className="who">agent · vessel-sdt</span>
+              <span className="who">agent · mito-sdt</span>
               <div className="plan">
                 <div className="head">
                   <b>Plan</b>

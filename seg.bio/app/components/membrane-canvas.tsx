@@ -7,7 +7,7 @@ const MembraneViewer = dynamic(() => import("./membrane-viewer"), {
   loading: () => (
     <img
       src="/hero-vessel-poster.webp"
-      alt="blood vessel segmentation · 3D EM"
+      alt="organelle segmentation · 3D EM"
       style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
     />
   ),
