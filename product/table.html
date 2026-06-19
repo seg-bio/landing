@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What seg.bio can segment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --primary: #0d9488;
+    --primary-hover: #0f766e;
+    --text: #1f2937;
+    --muted: #4b5563;
+    --bg: #f8fafc;
+    --border: #e5e7eb;
+    --row-alt: #f9fafb;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+  header.page {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header.page h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  header.page p {
+    margin: 12px auto 0;
+    max-width: 640px;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+  .table-wrap {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  thead {
+    background: rgba(13, 148, 136, 0.06);
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td {
+    padding: 18px 20px;
+    border-top: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  tbody { border-top: 1px solid var(--border); }
+  tbody:first-of-type { border-top: none; }
+  td {
+    border-top: 1px dashed var(--border);
+  }
+  tbody tr:first-child td { border-top: none; }
+  td.object {
+    font-weight: 600;
+    width: 140px;
+    vertical-align: middle;
+  }
+  td.image { width: 132px; vertical-align: middle; }
+  .thumb {
+    width: 108px;
+    height: 72px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #0f172a;
+    display: block;
+  }
+  .thumb-placeholder {
+    width: 108px;
+    height: 72px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #134e4a 0%, #0f172a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  td.source { color: var(--text); }
+  td.achievement {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(220, 38, 38, 0.1);
+    color: #dc2626;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .badge.curation {
+    background: rgba(13, 148, 136, 0.1);
+    color: var(--primary);
+  }
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(13, 148, 136, 0.5);
+  }
+  a:hover {
+    color: var(--primary-hover);
+    border-bottom-color: var(--primary-hover);
+  }
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  @media (max-width: 720px) {
+    main { padding: 40px 16px; }
+    th, td { padding: 12px 12px; }
+    td.object { width: auto; }
+    .thumb, .thumb-placeholder { width: 80px; height: 56px; }
+    td.image { width: 96px; }
+    th:nth-child(4), td.achievement { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="page">
+    <h1>What seg.bio can segment</h1>
+    <p>Seven object classes across blood vessel, neuron, organelle, nuclei, synapse, mitochondria, and fiber — each backed by a leading benchmark or curated ground-truth dataset.</p>
+  </header>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Object</th>
+          <th>Example</th>
+          <th>Source</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="object">Blood vessel</td>
+          <td class="image"><img class="thumb" src="https://seg-bio.web.app/seg-membrane.webp" alt="blood vessel segmentation" /></td>
+          <td class="source"><a href="https://www.microns-explorer.org/cortical-mm3#vasculature" target="_blank" rel="noopener noreferrer">MICrONS 1mm³</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="object" rowspan="2">Neuron</td>
+          <td class="image" rowspan="2"><img class="thumb" src="https://seg-bio.web.app/seg-neuron.webp" alt="neuron segmentation" /></td>
+          <td class="source"><a href="https://structuralneurobiologylab.github.io/nisb/#" target="_blank" rel="noopener noreferrer">NISB Challenge</a></td>
+          <td class="achievement"><span class="badge">1st place</span>base track</td>
+        </tr>
+        <tr>
+          <td class="source"><a href="https://axonem.grand-challenge.org" target="_blank" rel="noopener noreferrer">AxonEM Challenge</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="object">Pan-organelle</td>
+          <td class="image"><img class="thumb" src="pan_organelle.png" alt="pan-organelle segmentation" /></td>
+          <td class="source"><a href="https://cellmapchallenge.janelia.org/leaderboard" target="_blank" rel="noopener noreferrer">CellMap Challenge</a></td>
+          <td class="achievement"><span class="badge">1st place</span></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="object" rowspan="2">Nuclei</td>
+          <td class="image" rowspan="2"><img class="thumb" src="https://seg-bio.web.app/seg-nuclei.webp" alt="nuclei segmentation" /></td>
+          <td class="source"><a href="https://www.biorxiv.org/content/10.64898/2026.05.16.725603v1" target="_blank" rel="noopener noreferrer">FAFB · MICrONS 1mm³</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+        <tr>
+          <td class="source"><a href="https://nucmm.grand-challenge.org" target="_blank" rel="noopener noreferrer">NucMM Challenge</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="object">Synapse</td>
+          <td class="image"><img class="thumb" src="https://seg-bio.web.app/seg-synapse.webp" alt="synapse segmentation" /></td>
+          <td class="source"><a href="https://cremi.org/leaderboard/" target="_blank" rel="noopener noreferrer">CREMI Challenge</a></td>
+          <td class="achievement"><span class="badge">1st place</span>cleft detection</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="object" rowspan="2">Mitochondria</td>
+          <td class="image" rowspan="2"><img class="thumb" src="mito.png" alt="mitochondria segmentation" /></td>
+          <td class="source"><a href="https://mitoem.grand-challenge.org" target="_blank" rel="noopener noreferrer">MitoEM Challenge</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+        <tr>
+          <td class="source"><a href="https://www.biorxiv.org/content/10.1101/2025.11.12.687478v1" target="_blank" rel="noopener noreferrer">MitoEM 2.0 Dataset</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="object">Fiber</td>
+          <td class="image"><img class="thumb" src="fiber.png" alt="fiber segmentation" /></td>
+          <td class="source"><a href="https://www.nature.com/articles/s41586-026-10156-9" target="_blank" rel="noopener noreferrer">CytoTape</a></td>
+          <td class="achievement"><span class="badge curation">GT curation</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    Last updated June 2026 · <a href="mailto:contact@seg.bio">contact@seg.bio</a>
+  </footer>
+</main>
+</body>
+</html>
