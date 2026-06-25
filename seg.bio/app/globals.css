@@ -580,3 +580,52 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* density tweak */
 body.density-spacious .section { padding: 120px 0; }
 body.density-tight .section { padding: 56px 0; }
+
+/* segmentation table */
+.seg-table-wrap {
+  margin-top: 40px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.seg-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.seg-table thead { background: var(--bg-sunk); }
+.seg-table th {
+  text-align: left; padding: 13px 20px;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+  color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.07em;
+  border-bottom: 1px solid var(--line);
+}
+.seg-table tbody { border-top: 1px solid var(--line); }
+.seg-table tbody:first-of-type { border-top: none; }
+.seg-table td { padding: 16px 20px; vertical-align: middle; border-top: 1px dashed var(--line); }
+.seg-table tbody tr:first-child td { border-top: none; }
+.seg-object { font-weight: 600; color: var(--ink); width: 150px; }
+.seg-image { width: 132px; }
+.seg-thumb {
+  width: 108px; height: 72px; border-radius: 8px;
+  object-fit: cover; background: var(--bg-ink); display: block;
+}
+.seg-source a {
+  color: var(--accent-ink);
+  border-bottom: 1px dotted color-mix(in oklch, var(--accent) 55%, transparent);
+  transition: color 0.15s, border-color 0.15s;
+}
+.seg-source a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.seg-result { color: var(--ink-2); font-size: 14px; }
+.seg-badge {
+  display: inline-block; font-size: 9.5px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 3px 8px; border-radius: 999px; margin-right: 8px; vertical-align: middle;
+}
+.seg-badge.first { background: var(--accent-soft); color: var(--accent-ink); }
+.seg-badge.curation { background: var(--bg-sunk); color: var(--ink-3); border: 1px solid var(--line); }
+.seg-note { color: var(--ink-3); font-size: 13px; }
+@media (max-width: 720px) {
+  .seg-table th, .seg-table td { padding: 12px 12px; }
+  .seg-object { width: auto; }
+  .seg-thumb { width: 84px; height: 56px; }
+  .seg-image { width: 100px; }
+  .seg-table th.col-result, .seg-table td.col-result { display: none; }
+}

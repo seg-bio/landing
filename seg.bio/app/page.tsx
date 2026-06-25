@@ -1,7 +1,7 @@
 import { Nav } from "./components/nav";
 import { Hero } from "./components/hero";
 import { LabsRow } from "./components/proof";
-import { CapabilityScale } from "./components/capability-scale";
+import { SegmentationTable } from "./components/segmentation-table";
 import { Triptych } from "./components/triptych";
 import { Compute } from "./components/compute";
 import { DemoSection } from "./components/demo-section";
@@ -21,17 +21,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section scale-section" id="capabilities">
+      <section className="section" id="capabilities">
         <div className="shell">
           <div className="section-eyebrow">— What it segments</div>
           <h2 className="section-title serif">
             From whole vessels down to single synapses — SOTA at every scale.
           </h2>
           <p className="section-lead">
-            One model per structure, five orders of magnitude in scale, public benchmarks at
-            or above the state of the art.
+            Seven object classes, each backed by a leading public benchmark or curated
+            ground-truth dataset — with first-place results on the CellMap, CREMI, and NISB
+            challenges.
           </p>
-          <CapabilityScale />
+          <SegmentationTable />
         </div>
       </section>
 
