@@ -3,8 +3,6 @@ import { Hero } from "./components/hero";
 import { LabsRow } from "./components/proof";
 import { SegmentationTable } from "./components/segmentation-table";
 import { Triptych } from "./components/triptych";
-import { Compute } from "./components/compute";
-import { DemoSection } from "./components/demo-section";
 import { FAQ } from "./components/faq";
 import { Signup } from "./components/signup";
 import { Footer } from "./components/footer";
@@ -43,29 +41,6 @@ export default function Home() {
             Three things, tightly coupled.
           </h2>
           <Triptych />
-        </div>
-      </section>
-
-      <section className="section" id="compute">
-        <div className="shell">
-          <div className="section-eyebrow">— Compute</div>
-          <h2 className="section-title serif">No GPUs? No problem.</h2>
-          <p className="section-lead">
-            Inference and fine-tuning run on our managed cluster. Pay in credits — no
-            provisioning, no GPU quotas, no setup. Or point us at your own cluster anytime
-            and run free.
-          </p>
-          <Compute />
-        </div>
-      </section>
-
-      <section className="section" id="demo">
-        <div className="shell">
-          <div className="section-eyebrow">— The agent at work</div>
-          <h2 className="section-title serif">
-            Type a request. Get a runnable plan.
-          </h2>
-          <DemoSection />
         </div>
       </section>
 
